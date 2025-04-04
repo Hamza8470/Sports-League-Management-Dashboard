@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sport League Management Dashboard - Pro</title>
+    <!-- Add Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="teams.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>
+            <!-- Placeholder Logo if Arsenal one isn't available -->
+            <img src="Arsenal_FC.svg.webp" alt="League Logo"
+                onerror="this.src='placeholder-logo.png'; this.alt='Default Logo';">
+            Arsenal League Pro
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#teams">Teams</a></li> <!-- New Link -->
+                <li><a href="#games">Games</a></li>
+                <li><a href="#enroll">Enroll</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home">
+            <h2><i class="fas fa-home"></i>Welcome to the Hub!</h2>
+            <div class="welcome-text">
+                <p>
+                    Dive into the heart of the action with the Sport League Management System Pro. Managing sports
+                    leagues, from local communities to competitive circuits, requires precision and passion. Our
+                    platform is your central command center, meticulously designed to simplify administration, enhance
+                    communication, and elevate the entire league experience.
+                </p>
+                <p>
+                    Whether you're tracking team rosters, scheduling nail-biting fixtures, posting real-time results, or
+                    onboarding new talent, our comprehensive toolkit has you covered. Navigate through the dashboard to
+                    explore registered teams, discover available sports, enroll participants, or connect with our
+                    support team.
+                </p>
+                <p>
+                    Our goal is to provide an efficient, engaging, and seamless platform for everyone involved –
+                    administrators, managers, players, and fans. Let's make this season the best one yet!
+                </p>
+            </div>
+        </section>
+
+
+
+        <!-- Teams Section (NEW) -->
+        <section id="teams">
+            <h2><i class="fas fa-shield-alt"></i>Registered Teams</h2>
+            <p class="section-intro">Browse the formidable teams competing across our leagues.</p>
+            <div class="teams-container">
+                <!-- Example Team 1 -->
+                <div class="team-card">
+                    <img src="royal-challengers-bengaluru-logo-A54D45DE4A-seeklogo.com.png" alt="Thunderbolts Logo" class="team-logo"
+                        onerror="this.src='placeholder-logo.png';">
+                    <h3>Thunderbolts FC</h3>
+                    <p><strong>Sport:</strong> Football</p>
+                    <p><strong>Captain:</strong> Alex Johnson</p>
+                    <p><strong>Status:</strong> Active</p>
+                </div>
+                <!-- Example Team 2 -->
+                <div class="team-card">
+                    <img src="york.jpg" alt="Vipers BC Logo" class="team-logo"
+                        onerror="this.src='placeholder-logo.png';">
+                    <h3>Vipers BC</h3>
+                    <p><strong>Sport:</strong> Basketball</p>
+                    <p><strong>Manager:</strong> Sarah Chen</p>
+                    <p><strong>Status:</strong> Active</p>
+                </div>
+                <!-- Example Team 3 -->
+                <div class="team-card">
+                    <img src="syd thnd.png" alt="Titans Cricket Logo" class="team-logo"
+                        onerror="this.src='placeholder-logo.png';">
+                    <h3>Titans Cricket</h3>
+                    <p><strong>Sport:</strong> Cricket</p>
+                    <p><strong>Captain:</strong> Ravi Patel</p>
+                    <p><strong>Status:</strong> Active</p>
+                </div>
+                <!-- Example Team 4 -->
+                <div class="team-card">
+                    <img src="grey falcons.jpg" alt="Eagles United Logo" class="team-logo"
+                        onerror="this.src='placeholder-logo.png';">
+                    <h3>Eagles United</h3>
+                    <p><strong>Sport:</strong> Football</p>
+                    <p><strong>Manager:</strong> David Lee</p>
+                    <p><strong>Status:</strong> Recruiting</p>
+                </div>
+                <!-- Add more teams as needed -->
+            </div>
+        </section>
+
+        <!-- Games Available Section -->
+        <section id="games">
+            <h2><i class="fas fa-futbol"></i>Games Available</h2>
+            <p class="section-intro">Explore the sports leagues you can join or follow through our platform.</p>
+            <div class="games-container">
+                <div class="sport-card">
+                    <i class="fas fa-futbol"></i> <!-- Football Icon -->
+                    <h3>Football</h3>
+                    <p>Join fast-paced 5-a-side or full 11-a-side leagues. Tactical plays, team spirit, and thrilling
+                        goals await.</p>
+                </div>
+
+                <div class="sport-card">
+                    <i class="fas fa-basketball-ball"></i> <!-- Basketball Icon -->
+                    <h3>Basketball</h3>
+                    <p>Showcase your skills on the court. Dribble, shoot, and slam dunk your way through competitive
+                        matches.</p>
+                </div>
+
+                <div class="sport-card">
+                    <i class="fas fa-baseball-ball"></i> <!-- Cricket/Baseball Icon -->
+                    <h3>Cricket</h3>
+                    <p>Experience the gentleman's game. Strategic batting, precision bowling, and sharp fielding in T20
+                        and ODI formats.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enroll Now Section -->
+        <section id="enroll">
+            <h2><i class="fas fa-user-plus"></i>Enroll Now</h2>
+            <p class="section-intro">Ready to compete? Fill out the form below to register your interest in joining a
+                league!</p>
+            <form id="enrollForm" action="#" method="post" onsubmit="submitEnrollment(); return false;">
+                <label for="enroll-name">Full Name:</label>
+                <input type="text" id="enroll-name" name="name" required placeholder="Enter your full name">
+
+                <label for="enroll-email">Email Address:</label>
+                <input type="email" id="enroll-email" name="email" required placeholder="you@example.com">
+
+                <label for="enroll-mobile">Mobile Number:</label>
+                <input type="tel" id="enroll-mobile" name="mobile" required placeholder="e.g., +1 555 123 4567">
+
+                <label for="enroll-sport">Preferred Sport:</label>
+                <select name="sport" id="enroll-sport" required>
+                    <option value="" disabled selected>-- Select a Sport --</option>
+                    <option value="Football">Football</option>
+                    <option value="Cricket">Cricket</option>
+                    <option value="Basketball">Basketball</option>
+                </select>
+
+                <label for="enroll-message">Message (Optional):</label>
+                <textarea id="enroll-message" name="message" rows="4"
+                    placeholder="Tell us about your experience or any questions you have..."></textarea>
+
+                <button type="submit">
+                    <i class="fas fa-check-circle"></i> Submit Enrollment
+                </button>
+            </form>
+        </section>
+
+        <!-- Contact Us Section -->
+        <section id="contact">
+            <h2><i class="fas fa-envelope"></i>Get In Touch</h2>
+            <p class="section-intro">Have questions, feedback, or need support? Reach out to us using the form below.
+            </p>
+            <form id="contactForm" action="#" method="post" onsubmit="submitContact(); return false;">
+                <label for="contact-name">Your Name:</label>
+                <input type="text" id="contact-name" name="name" required placeholder="Enter your name">
+
+                <label for="contact-email">Your Email:</label>
+                <input type="email" id="contact-email" name="email" required placeholder="your.email@example.com">
+
+                <label for="contact-message">Your Message:</label>
+                <textarea id="contact-message" name="message" rows="6" required
+                    placeholder="Type your message here..."></textarea>
+
+                <button type="submit">
+                    <i class="fas fa-paper-plane"></i> Send Message
+                </button>
+            </form>
+        </section>
+
+        <!-- About Us / Team Section -->
+        <section id="about">
+            <h2><i class="fas fa-users"></i>Meet Our Team</h2>
+            <p class="section-intro">The dedicated individuals ensuring your league management is seamless and
+                effective.</p>
+            <div class="team-container">
+                <div class="team-member">
+                    <img src="hamza img.jpg" alt="Mohammed Hamza Qamar Photo"
+                        onerror="this.src='placeholder-avatar.png';"> <!-- Added fallback -->
+                    <div class="team-member-info">
+                        <h3>Mohammed Hamza Qamar</h3>
+                        <p><strong>Position:</strong> Project Lead & Developer</p>
+                        <p><strong>Email:</strong> Mohd_Hamza@example.com</p>
+                        <p><strong>Registration:</strong> 12307352</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2023-2024 Sport League Pro Management. All rights reserved.</p>
+        <p>Empowering Sports Communities | <a href="#privacy" style="color: var(--light-color);">Privacy Policy</a> | <a
+                href="#terms" style="color: var(--light-color);">Terms of Service</a></p>
+    </footer>
+
+    <script>
+        function submitEnrollment() {
+            const form = document.getElementById("enrollForm");
+            const name = document.getElementById("enroll-name").value;
+            const email = document.getElementById("enroll-email").value;
+            const mobile = document.getElementById("enroll-mobile").value;
+            const sport = document.getElementById("enroll-sport").value;
+
+            if (!form.checkValidity()) { // Use built-in HTML5 validation feedback
+                form.reportValidity();
+                return;
+            }
+
+            console.log('Enrollment Submitted:', { name, email, mobile, sport });
+            alert('Enrollment request received! Thank you, ' + name + '. We will review your application and contact you shortly.');
+            form.reset();
+        }
+
+        function submitContact() {
+            const form = document.getElementById("contactForm");
+            const name = document.getElementById("contact-name").value;
+            const email = document.getElementById("contact-email").value;
+            const message = document.getElementById("contact-message").value;
+
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return;
+            }
+
+            console.log('Contact Message Submitted:', { name, email, message });
+            alert('Message sent successfully! Thank you for reaching out, ' + name + '. We will respond as soon as possible.');
+            form.reset();
+        }
+
+        // Fade-in animation observer (no changes needed)
+        const sections = document.querySelectorAll('main section');
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                // Check if section is coming into view
+                if (entry.isIntersecting) {
+                    // Add a class to trigger animation only once if needed,
+                    // but current setup reruns animation if it scrolls out and back in.
+                    // If you want it only once:
+                    // entry.target.classList.add('visible');
+                    // observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+        // Simple image error handling for placeholders
+        document.addEventListener('error', function (event) {
+            if (event.target.tagName.toLowerCase() === 'img') {
+                const fallback = event.target.getAttribute('onerror');
+                if (fallback && fallback.includes('placeholder')) {
+                    // Optionally log the error or image src
+                    console.warn(`Image failed to load: ${event.target.src}. Using fallback.`);
+                }
+            }
+        }, true); // Use capture phase
+
+    </script>
+
+</body>
+
+</html>
